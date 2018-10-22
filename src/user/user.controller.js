@@ -9,8 +9,8 @@ module.exports.check = async (req, res, next) => {
   }
 
   next();
-};
-
+};   
+                 
 module.exports.create = async (req, res) => {
   const user = new User(req.body);
   await user.save();
