@@ -1,12 +1,25 @@
 import xml from "xml";
 
-module.exports.templateXML = async (res,data,status = 0,msg = 'OK.') => {
-    var output = {
-        abc : 1
-    }
+module.exports.templateXML = async (res,data = [],status = 0,msg = 'OK.') => {
+  
+    var template = [
+        {
+            app : [
+                {
+                    _attr : { version : "1.0.8" , lang : "tha" }
+                },
+                {
+                    container : [
+                        {
+                            _attr : { lang : "tha" }
+                        },
+                        "data"
+                    ]
+                }
+            ]
+        }
+    ]
     
     res.set('Content-Type', 'text/xml');
-    var example4 = [ { toys: [ { _attr: { decade: '80s', locale: 'US'} }, { toy: 'Transformers' } , { toy: 'GI Joe' }, { toy: 'He-man' } ] } ];
-    res.send(xml(example4, true));
-    // res.json(output);
+    res.send(xml(template, true));
 };
