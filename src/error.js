@@ -1,6 +1,4 @@
-/* eslint no-unused-vars: 0 */
 import winston from "winston";
-// const winston = require('winston');
 
 module.exports.notFound = (req, res, next) => {
   winston.warn('Not found');
