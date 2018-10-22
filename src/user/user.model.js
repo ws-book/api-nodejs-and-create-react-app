@@ -2,17 +2,13 @@ import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
   name: String,
-  age: Number,
-  email : String,
-  phone: {
+  age: Number, 
+  email: {
     type: String,
-    validate: {
-      validator: function(v) {
-        return /\d{3}-\d{3}-\d{4}/.test(v);
-      },
-      message: props => `${props.value} is not a valid phone number!`
-    },
-    required: [true, 'User phone number required']
+    validate: function(email) {
+      return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
+    }, 
+    required: [true, 'User email required']
   }
 });
 
