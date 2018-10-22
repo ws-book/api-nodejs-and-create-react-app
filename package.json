@@ -2,8 +2,7 @@
   "name": "master-api",
   "version": "1.0.0",
   "description": "Nodejs API with Express and MongoDB.",
-  "author": "S-Planet <wittawat@s-planet.co.th>",
-  "homepage": "http://s-planet.co.th/",
+  "author": "wittawat",
   "keywords": [
     "node",
     "nodemon",
@@ -44,5 +43,5 @@
     "nodemon": "1.17.3",
     "prettier": "1.12.1"
   },
-  "license": "S-planet"
+  "license": "MIT"
 }
