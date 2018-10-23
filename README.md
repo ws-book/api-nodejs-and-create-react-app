@@ -1,2 +1,1 @@
-# nodejs-api-mongodb-starter
- 
+# nodejs-with-react-server-client
