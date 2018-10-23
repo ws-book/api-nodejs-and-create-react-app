@@ -3,6 +3,7 @@ import winston from "winston";
 import app from "./app";
 import config from "./config";
 
+// console.log('server/src/index.js')
 
 mongoose.connect(config.DATABASE);
 mongoose.Promise = global.Promise;

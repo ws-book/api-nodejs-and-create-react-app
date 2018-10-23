@@ -2,6 +2,7 @@
 import express from "express";
 import catchErrors from "express-catch-errors";
 import {  check , create , remove , list , update , view } from "./user.controller";
+ 
 
 const router = express.Router(); 
 router

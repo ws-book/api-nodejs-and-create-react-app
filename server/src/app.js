@@ -3,7 +3,7 @@ import cors from "@robertoachar/express-cors";
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan"; 
-import {  catchAll , notFound } from "./error";
+import { catchAll , notFound } from "./error";
 import userRouter from "./user/user.router";
 
 const app = express();
